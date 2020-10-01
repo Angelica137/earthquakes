@@ -33,7 +33,10 @@ print(lats[:5])
 data = [{
         'type': 'scattergeo',
         'lon': lons,
-        'lat': lats
+        'lat': lats,
+        'marker': {
+            'size': [5*mag for mag in mags],
+        },
         }]
 my_layout = Layout(title='Global Earthquakes')
 
