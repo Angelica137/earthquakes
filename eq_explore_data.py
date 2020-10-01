@@ -13,7 +13,6 @@ with open(readable_file, 'w') as f:
     json.dump(all_eq_data, f, indent=4)
 
 all_eq_dicts = all_eq_data['features']
-print(len(all_eq_dicts))
 
 # get the list of earthquakes' magnitudes
 mags, lons, lats = [], [], []
@@ -24,10 +23,6 @@ for eq_dict in all_eq_dicts:
     mags.append(mag)
     lons.append(lon)
     lats.append(lat)
-
-print(mags[:10])
-print(lons[:5])
-print(lats[:5])
 
 # Map the earthquakes
 data = [{
